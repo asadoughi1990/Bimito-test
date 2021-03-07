@@ -1,0 +1,181 @@
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/eot/IRANSansWeb(FaNum)_Black.eot");
+  src: url("../fonts/eot/IRANSansWeb(FaNum)_Black.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */ url("../fonts/woff2/IRANSansWeb(FaNum)_Black.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("../fonts/woff/IRANSansWeb(FaNum)_Black.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("../fonts/ttf/IRANSansWeb(FaNum)_Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/eot/IRANSansWeb(FaNum)_Bold.eot");
+  src: url("../fonts/eot/IRANSansWeb(FaNum)_Bold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */ url("../fonts/woff2/IRANSansWeb(FaNum)_Bold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("../fonts/woff/IRANSansWeb(FaNum)_Bold.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("../fonts/ttf/IRANSansWeb(FaNum)_Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/eot/IRANSansWeb(FaNum)_Medium.eot");
+  src: url("../fonts/eot/IRANSansWeb(FaNum)_Medium.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */ url("../fonts/woff2/IRANSansWeb(FaNum)_Medium.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("../fonts/woff/IRANSansWeb(FaNum)_Medium.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("../fonts/ttf/IRANSansWeb(FaNum)_Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/eot/IRANSansWeb(FaNum)_Light.eot");
+  src: url("../fonts/eot/IRANSansWeb(FaNum)_Light.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */ url("../fonts/woff2/IRANSansWeb(FaNum)_Light.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("../fonts/woff/IRANSansWeb(FaNum)_Light.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("../fonts/ttf/IRANSansWeb(FaNum)_Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/eot/IRANSansWeb(FaNum)_UltraLight.eot");
+  src: url("../fonts/eot/IRANSansWeb(FaNum)_UltraLight.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */ url("../fonts/woff2/IRANSansWeb(FaNum)_UltraLight.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("../fonts/woff/IRANSansWeb(FaNum)_UltraLight.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("../fonts/ttf/IRANSansWeb(FaNum)_UltraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/eot/IRANSansWeb(FaNum).eot");
+  src: url("../fonts/eot/IRANSansWeb(FaNum).eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */ url("../fonts/woff2/IRANSansWeb(FaNum).woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("../fonts/woff/IRANSansWeb(FaNum).woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("../fonts/ttf/IRANSansWeb(FaNum).ttf") format("truetype");
+}
+
+/*--------------------------------------------------------------
+Main
+--------------------------------------------------------------*/
+
+body {
+  font-family: "IRANSans";
+  font-size: 16px;
+  background: linear-gradient(to right, #FEFBEB 0%,#FEFBEB 30%,white 30%,white 100%);
+}
+
+/*--------------------------------------------------------------
+Navbar
+--------------------------------------------------------------*/
+
+#navbar {
+  margin-top: 20px;
+}
+
+#navbar .title {
+  font-weight: bold;
+  margin-right: 40%;
+  margin-left: 35%;
+}
+
+/*--------------------------------------------------------------
+Car Image
+--------------------------------------------------------------*/
+
+.car-img {
+  position: fixed;
+  left: 35px;
+  bottom: 50px;
+  height: 38%;
+}
+
+/*--------------------------------------------------------------
+Form Area
+--------------------------------------------------------------*/
+
+.form-area {
+  width: 40%;
+  margin-right: 7%;
+  margin-top: 4%;
+}
+
+.form-text {
+  font-size: 12px;
+}
+
+.btn-register {
+  background-color: #25B79B;
+  border: 2px solid #25B79B;
+  color: white;
+  padding: 6px 35px;
+  border-radius: 50px;
+  font-size: 14px;
+}
+
+.btn-register:hover {
+  background-color: #11b191;
+  border: 2px solid #11b191;
+  cursor: pointer;
+}
+
+/*--------------------------------------------------------------
+Isurance Select
+--------------------------------------------------------------*/
+
+.btn-insurance {
+  border: 2px solid lightgrey;
+  border-radius: 15px;
+  padding: 20px 30px 15px 30px;
+  background: transparent;
+}
+
+.btn-body {
+  border: 2px solid lightgrey;
+  border-radius: 15px;
+  padding: 20px 45px 15px 45px;
+  color: black;
+  background: lightgrey;
+}
+
+.btn-insurance:hover {
+  background: lightgrey;
+  cursor: pointer;
+}
+
+.btn-overlay{
+  background-color: grey;
+  z-index: 2;
+  opacity: 0.5;
+}
