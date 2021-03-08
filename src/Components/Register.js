@@ -4,7 +4,7 @@ import { FormGroup, FormFeedback, Input, Col, Row } from "reactstrap";
 import * as Yup from "yup";
 import { Formik, Field, Form } from "formik";
 
-function Register() {
+function Register(props) {
   const initialValues = {
     id: 0,
     name: "",
@@ -35,8 +35,9 @@ function Register() {
       ),
   });
 
-  function onSubmit() {
-    console.log("SSSSSSSSSSSSSSSSSSSSSSSS");
+  function onSubmit(fields) {
+    console.log(fields);
+    props.history.push("/insure-select");
   }
 
   return (

@@ -93,7 +93,13 @@ Main
 body {
   font-family: "IRANSans";
   font-size: 16px;
-  background: linear-gradient(to right, #FEFBEB 0%,#FEFBEB 30%,white 30%,white 100%);
+  background: linear-gradient(
+    to right,
+    #fefbeb 0%,
+    #fefbeb 30%,
+    white 30%,
+    white 100%
+  );
 }
 
 /*--------------------------------------------------------------
@@ -136,10 +142,10 @@ Form Area
 }
 
 .btn-register {
-  background-color: #25B79B;
-  border: 2px solid #25B79B;
+  background-color: #25b79b;
+  border: 2px solid #25b79b;
   color: white;
-  padding: 6px 35px;
+  padding: 8px 35px;
   border-radius: 50px;
   font-size: 14px;
 }
@@ -148,6 +154,25 @@ Form Area
   background-color: #11b191;
   border: 2px solid #11b191;
   cursor: pointer;
+}
+
+.btn-form {
+  background-color: transparent;
+  border: 2px solid #25b79b;
+  color: #25b79b;
+  padding: 9px 30px;
+  border-radius: 50px;
+  font-size: 14px;
+}
+
+.btn-form:hover {
+  text-decoration: none;
+  color: #25b79b;
+  cursor: pointer;
+}
+
+.arrow-change {
+  transform: rotate(180deg);
 }
 
 /*--------------------------------------------------------------
@@ -159,6 +184,9 @@ Isurance Select
   border-radius: 15px;
   padding: 20px 30px 15px 30px;
   background: transparent;
+  text-align: center;
+  color: black;
+  text-decoration: none;
 }
 
 .btn-body {
@@ -171,10 +199,12 @@ Isurance Select
 
 .btn-insurance:hover {
   background: lightgrey;
+  color: black;
+  text-decoration: none;
   cursor: pointer;
 }
 
-.btn-overlay{
+.btn-overlay {
   background-color: grey;
   z-index: 2;
   opacity: 0.5;
