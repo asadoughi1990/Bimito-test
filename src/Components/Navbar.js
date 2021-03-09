@@ -25,7 +25,7 @@ function navbar(props) {
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="title justify-content-end">
-          سامانه مقایسه و خرید آنلاین بیمه
+          <span id="nav-title">سامانه مقایسه و خرید آنلاین بیمه</span>
         </Navbar.Collapse>
         <Navbar.Collapse className="justify-content-end">
           {login}

@@ -1,5 +1,6 @@
 const initialState = {
   fullName: "",
+  mobileNumber: "",
   carType: "",
   carModel: "",
   insureCompany: "",
@@ -13,6 +14,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         fullName: action.payload,
+      };
+      case "ADD_MOBILE":
+      return {
+        ...state,
+        mobileNumber: action.payload,
       };
     case "ADD_CARTYPE":
       return {
@@ -28,6 +34,16 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         insureCompany: action.payload,
+      };
+      case "ADD_THIRD_DISCOUNT":
+      return {
+        ...state,
+        thirdDiscount: action.payload,
+      };
+      case "ADD_DRIVER_DISCOUNT":
+      return {
+        ...state,
+        driverDiscount: action.payload,
       };
     default:
       return state;

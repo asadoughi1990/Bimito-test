@@ -39,6 +39,7 @@ function Register(props) {
   function onSubmit(fields) {
     const fullName = fields.name + " " + fields.family;
     props.onAddFullname(fullName);
+    props.onAddMobileNumber(fields.mobilenumber);
     props.history.push("/insure-select");
   }
 
@@ -51,7 +52,7 @@ function Register(props) {
       {({ errors, touched }) => {
         return (
           <div className="form-area">
-            <h3 className="mb-5">ثبت نام</h3>
+            <h3 className="page-title mb-5">ثبت نام</h3>
             <Form>
               <Row>
                 <Col md="6">
@@ -115,7 +116,7 @@ function Register(props) {
                   <FormGroup>
                     <button
                       type="submit"
-                      className="btn-register mt-3 float-right"
+                      className="btn-register mt-3"
                     >
                       ثبت نام
                     </button>
@@ -134,6 +135,8 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onAddFullname: (fullName) =>
       dispatch({ type: "ADD_FULLNAME", payload: fullName }),
+    onAddMobileNumber: (mobile) =>
+      dispatch({ type: "ADD_MOBILE", payload: mobile }),
   };
 };
 

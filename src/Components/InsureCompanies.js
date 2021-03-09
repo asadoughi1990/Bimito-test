@@ -36,7 +36,7 @@ function InSureCompanies(props) {
 
   return (
     <div className="form-area">
-      <h3 className="mb-5">بیمه شخص ثالث</h3>
+      <h3 className="page-title mb-5">بیمه شخص ثالث</h3>
       <p className="text-muted mb-5">
         شرکت بیمه گر قبلی خود را در این بخش وارد کنید.
       </p>

@@ -54,7 +54,7 @@ function CarModel(props) {
 
   return (
     <div className="form-area">
-      <h3 className="mb-5">بیمه شخص ثالث</h3>
+      <h3 className="page-title mb-5">بیمه شخص ثالث</h3>
       <p className="text-muted mb-5">نوع و مدل خودرو خود را انتخاب کنید.</p>
       <Row>
         <Col md="6">
