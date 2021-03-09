@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -8,7 +9,7 @@ import Select from "react-select";
 let carTypes = [];
 let carModels = [];
 
-function CarModel() {
+function CarModel(props) {
   const [data, setData] = useState([]);
   const [cartypeval, setcartypeval] = useState(0);
 
@@ -27,11 +28,11 @@ function CarModel() {
 
   function onChangeTypes(e) {
     setcartypeval(e.value);
-    console.log(e.label);
+    props.onAddCarType(e.label);
   }
 
   function onChangeModels(e) {
-    console.log(e.label);
+    props.onAddCarModel(e.label);
   }
 
   function filterCarModels() {
@@ -43,6 +44,12 @@ function CarModel() {
       value: item.id,
     }));
     return carModels;
+  }
+
+  function clickHandler() {
+    if (props.model !== "") {
+      props.history.push("/insure-company");
+    }
   }
 
   return (
@@ -71,7 +78,7 @@ function CarModel() {
       </Row>
       <Row>
         <Col md="12">
-          <Link to={"/insure-company"} className="btn-form float-right mt-5">
+          <button onClick={clickHandler} className="btn-form float-right mt-5">
             مرحله بعد
             <img
               src="assets/img/arrow.svg"
@@ -79,7 +86,7 @@ function CarModel() {
               alt="arrow"
               height="10"
             />
-          </Link>
+          </button>
           <Link to={"/insure-select"} className="btn-form float-left mt-5">
             <img
               src="assets/img/arrow.svg"
@@ -95,4 +102,18 @@ function CarModel() {
   );
 }
 
-export default CarModel;
+const mapStateToProps = (state) => {
+  return {
+    model: state.carModel,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onAddCarType: (type) => dispatch({ type: "ADD_CARTYPE", payload: type }),
+    onAddCarModel: (model) =>
+      dispatch({ type: "ADD_CARMODEL", payload: model }),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(CarModel);

@@ -112,8 +112,11 @@ Navbar
 
 #navbar .title {
   font-weight: bold;
-  margin-right: 40%;
-  margin-left: 35%;
+}
+
+.login-name {
+  font-size: 13px;
+  font-weight: bold;
 }
 
 /*--------------------------------------------------------------

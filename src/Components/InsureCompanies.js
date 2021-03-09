@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -7,7 +8,7 @@ import Select from "react-select";
 
 let insuranceCompanies = [];
 
-function InSureCompanies() {
+function InSureCompanies(props) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -24,7 +25,13 @@ function InSureCompanies() {
   }
 
   function onChangeCompany(e) {
-    console.log(e.label);
+    props.onAddInsureCompany(e.label);
+  }
+
+  function clickHandler() {
+    if (props.company !== "") {
+      props.history.push("/discount");
+    }
   }
 
   return (
@@ -46,7 +53,7 @@ function InSureCompanies() {
       </Row>
       <Row>
         <Col md="12">
-          <Link to={"/discount"} className="btn-form float-right mt-5">
+          <button onClick={clickHandler} className="btn-form float-right mt-5">
             مرحله بعد
             <img
               src="assets/img/arrow.svg"
@@ -54,7 +61,7 @@ function InSureCompanies() {
               alt="arrow"
               height="10"
             />
-          </Link>
+          </button>
           <Link to={"/car"} className="btn-form float-left mt-5">
             <img
               src="assets/img/arrow.svg"
@@ -70,4 +77,16 @@ function InSureCompanies() {
   );
 }
 
-export default InSureCompanies;
+const mapStateToProps = (state) => {
+  return {
+    company: state.insureCompany,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onAddInsureCompany: (lastinsure) => dispatch({ type: "ADD_INSURECOMPANY", payload: lastinsure }),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(InSureCompanies);

@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 
 import { FormGroup, FormFeedback, Input, Col, Row } from "reactstrap";
 import * as Yup from "yup";
@@ -36,7 +37,8 @@ function Register(props) {
   });
 
   function onSubmit(fields) {
-    console.log(fields);
+    const fullName = fields.name + " " + fields.family;
+    props.onAddFullname(fullName);
     props.history.push("/insure-select");
   }
 
@@ -128,4 +130,11 @@ function Register(props) {
   );
 }
 
-export default Register;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onAddFullname: (fullName) =>
+      dispatch({ type: "ADD_FULLNAME", payload: fullName }),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Register);
